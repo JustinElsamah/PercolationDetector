@@ -6,6 +6,7 @@ public class Percolation {
     private final WeightedQuickUnionUF mUnionFindArray;
     private final int n;
 
+    // create n-by-n grid, with all sites blocked
     public Percolation(int n) {
         mNumOfOpenSites = 0;
         this.n = n;
@@ -33,7 +34,8 @@ public class Percolation {
             mUnionFindArray.union(this.n * this.n + 1, this.n * this.n - i);
         }
     }
-
+    
+    // open site (row, col) if it is not open already
     public void open(int row, int col) {
         if (isOutOfBounds(row, col)) {
             throw new IllegalArgumentException();
@@ -55,7 +57,7 @@ public class Percolation {
     }
 
 
-
+    // is site (row, col) open?
     public boolean isOpen(int row, int col) {
         if (isOutOfBounds(row, col)) {
             throw new IllegalArgumentException();
@@ -67,6 +69,7 @@ public class Percolation {
         return false;
     }
 
+    // is site (row, col) full?
     public boolean isFull(int row, int col) {
         if (isOutOfBounds(row, col)) {
             throw new IllegalArgumentException();
@@ -78,10 +81,12 @@ public class Percolation {
         return false;
     }
 
+    // number of open sites
     public int numberOfOpenSites() {
         return mNumOfOpenSites;
     }
 
+    // does the system percolate?
     public boolean percolates() {
         if (mUnionFindArray.connected(0, this.n * this.n + 1)) {
             return true;
@@ -89,10 +94,12 @@ public class Percolation {
         return false;
     }
 
+    // convert (row, col) into an index in the union find array
     private int twoDToOneD(int row, int col) {
         return (row - 1) * this.n + col;
     }
 
+    // checks if (row, col) is out of bounds
     private boolean isOutOfBounds(int row, int col) {
         if (row < 1 || row > this.n || col < 1 || col > this.n) {
             return true;
