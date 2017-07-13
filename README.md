@@ -1,5 +1,4 @@
 # Percolation_Statistics
-API to determine Percolation Statistics such as average percent of full blocks at time of percolation using Princeton's WeightedQuickUnionFind, StdRandom and StdStats API's
 
 ![alt text](https://raw.githubusercontent.com/JustinElsamah/Percolation_Statistics/master/Screen%20Shot%202017-07-13%20at%2010.35.42%20AM.png)
 
