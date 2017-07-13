@@ -1,7 +1,7 @@
 # Percolation_Statistics
 API to determine Percolation Statistics such as average percent of full blocks at time of percolation using Princeton's WeightedQuickUnionFind, StdRandom and StdStats API's
 
-![alt text](https://raw.githubusercontent.com/JustinElsamah/Percolation_Statistics/master/path/to/img.png)
+![alt text](https://raw.githubusercontent.com/JustinElsamah/Percolation_Statistics/master/Screen%20Shot%202017-07-13%20at%2010.35.42%20AM.png)
 
 
 Percolation. Given a composite systems comprised of randomly distributed insulating and metallic materials: what fraction of the materials need to be metallic so that the composite system is an electrical conductor? Given a porous landscape with water on the surface (or oil below), under what conditions will the water be able to drain through to the bottom (or the oil to gush through to the surface)? Scientists have defined an abstract process known as percolation to model such situations.
